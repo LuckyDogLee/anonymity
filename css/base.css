@@ -1,0 +1,497 @@
+body{
+  font: 100%/1.2 "Microsoft YaHei", Georgia, serif;
+  margin: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+li{
+  list-style: none;
+  font-family: "Microsoft YaHei";
+}
+
+button:hover,
+a:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+.page{
+  margin: 0 auto;
+  max-width: 60em;
+}
+
+
+
+/* 页面级页眉 */
+.hbg-color{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 4em;
+  background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+}
+
+.g-masthead{
+  position: relative;
+  z-index: 2;
+  height: 4em;
+  color: white;
+}
+
+.g-masthead li,
+.g-masthead a,
+.g-masthead strong{
+  display: inline-block;
+  height: 4em;
+  line-height: 4em;
+}
+
+.g-masthead a{
+  width: 4em;
+
+  text-align: center;
+}
+
+.g-masthead img{
+  width: 3em;
+  height: 3em;
+  vertical-align: middle;
+}
+
+.g-masthead span{
+  font-weight: normal;
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+.g-masthead ul{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.g-masthead ul a{
+  color: inherit;
+}
+
+.g-masthead ul a:hover{
+  background-color: rgb(90, 90, 100);
+}
+
+
+
+/* 全站导航 */
+.g-nav{
+  text-align: center;
+}
+
+.g-nav ul{
+  /*margin: 1em 0;*/
+  padding: 0;
+}
+
+.g-nav:first-child{
+  width: 100%;
+}
+
+.g-nav li,
+.g-nav a{
+  display: inline-block;
+  /*width: 6em;*/
+
+  width: 32%;
+
+  height: 3em;
+  line-height: 3em;
+  background-color: white;
+  text-align: center;
+  color: black;
+}
+
+.g-nav a{
+  width: 100%;
+}
+
+.g-nav li:last-child{
+  /*width: 18.5em;*/
+  
+  width: 100%;
+
+  margin-top: 1em;
+
+  position: relative;
+}
+
+.g-nav a:hover{
+  background-color: rgb(30, 120, 207); 
+  color: white;
+}
+
+ul[class="submenu"]{
+/*.submenu{ */
+  position: absolute;
+  left: -999em;
+  float: right;
+
+  z-index: 3;
+
+/*  width: 100%;*/
+  margin: 0;
+}
+
+.g-nav li:hover .submenu,
+#user-bar li:hover .user-submenu{
+  left: auto;
+}
+
+.submenu li{
+  width: 100%;
+}
+
+.submenu li:last-child{
+  /*width: 6em;*/
+  margin-top: 0px;
+  border-bottom: 0.1em solid rgb(238, 238, 238);
+}
+
+.submenu li{
+  display: block;
+  margin: 0;
+  border-top: 0.1em solid rgb(238, 238, 238);
+}
+
+.lable-search{
+  cursor: pointer;
+  display: inline;
+  padding: 0 0;
+  text-align: left;
+  width: auto;
+  font-family: "Microsoft YaHei";
+  vertical-align: auto;
+}
+
+input[id="search"],
+input[class="btn-search"]{
+    font-size: 0.8em;
+    line-height: 1.8em;
+    font-family: "Microsoft YaHei";
+}
+
+.btn-search{
+  display: inline;
+  /*width: 2.8em;*/
+  width: 4em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: rgb(30, 120, 207);
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+
+/* 页面级页脚 */
+.g-footer{
+  clear: both;
+}
+
+.fbg-color{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 4em;
+  background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+}
+
+.g-footer p{
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding-left: 1em;
+  padding-top: 1em;
+  color: white;
+}
+
+
+
+/* 登录注册导航栏 */
+#hbtn-login,
+#hbtn-lgout{
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
+
+  border: 0;
+  font: inherit;
+  text-align: center;
+  color: inherit;
+  background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+}
+
+#hbtn-login:hover,
+#hbtn-lgout:hover{
+  background: rgb(90, 90, 100);
+}
+
+/* 使登录框居中 */
+.m-mask{
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3b3b3b;
+  opacity: 0.75;
+}
+
+#login-bar-parent{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  text-align: center;
+}
+
+/* 登录框 */
+.m-login,
+.tab,
+.loginBtn button,
+#btn-close{
+  border-radius: 0.35em;
+}
+
+.m-login{
+  display: inline-block;
+  position: absolute;
+  left: -999em;
+
+  width: 18em;
+  height: 14em;
+
+  background-color: white;
+  text-align: left;
+}
+
+.item{
+  width: 100%;
+  margin-top: 0.65em;
+  text-align: center;
+}
+
+.tab{
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 2.5%;
+  line-height: 2.1em;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  text-align: left;
+}
+
+.tab button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3000;
+  line-height: 0.84em;
+  background-color: rgb(51, 51, 51);
+  border: 0;
+  padding: 0.28em;
+}
+
+.tab button:hover{
+  background: rgb(90, 90, 100);
+}
+
+.tab button img{
+  width: 0.84em;
+  height: 0.84em;
+  padding: 0;
+}
+
+.title span{
+  vertical-align: super;
+  font-size: 0.35em;
+}
+
+.email img,
+.password img{
+  width: 16%;
+  height: 2.225em;
+  vertical-align: middle;
+  padding-right: 2%;
+}
+
+.email input,
+.password input{  
+  width: 75%;
+  height: 1.75em;
+  margin-top: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", Georgia, serif;
+  text-align: left;
+}
+
+.input-invalid{
+  /* 输入错误时，输入框边框的样式 */
+  border-color: red;
+  color: red;
+}
+
+.loginBtn button{
+  width: 95%;
+  height: 2em;
+  border: 0;
+  font-family: "Microsoft YaHei";
+  background-color: rgb(30, 120, 207);
+  color: white;
+}
+
+.tip a{
+  display: inline-block;
+  width: 47.5%;
+}
+
+.tip a:first-child{
+  text-align: left;
+}
+
+.tip a:last-child{
+  text-align: right;
+}
+
+
+
+/* user-bar */
+#user-bar{
+  visibility: hidden;
+}
+
+ul[class="user-submenu"]{
+  left: -999em;
+  top: auto;
+  right: auto;
+  background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+}
+
+.user-submenu li,
+.user-submenu a{
+  display: block;
+  border-bottom: 0.1em solid rgb(238, 238, 238);
+}
+
+.user-submenu a:hover{
+  background: rgb(90, 90, 100);
+}
+
+@media only screen and (min-width: 48em){
+  /* 全站导航 */
+  .g-nav{
+    text-align: left;
+  }
+
+  .g-nav ul{
+    padding: 0;
+  }
+
+  .g-nav:first-child{
+    width: 100%;
+  }
+
+  .g-nav li,
+  .g-nav a{
+    width: 9.1em;
+  }
+
+  .g-nav a{
+    width: 100%;
+  }
+
+  .g-nav li:last-child{
+    width: 18.5em;
+    margin-top: 1em;
+    position: relative;
+  }
+
+  ul[class="submenu"]{
+  /*.submenu{ */
+    margin: 0;
+  }
+
+  .submenu li{
+    width: 100%;
+  }
+
+  .submenu li:last-child{
+    width: 9.2em;
+    margin-top: 0px;
+    border-bottom: 0.1em solid rgb(238, 238, 238);
+  }
+
+  /* 登录框 */
+  .m-login,
+  .tab,
+  .loginBtn button,
+  #btn-close{
+    border-radius: 0.5em;
+  }
+
+  .m-login{
+    width: 25em;
+    height: 18.8em;
+  }
+
+  .item{
+    margin-top: 1em;
+  }
+
+  .tab{
+    margin-top: 0;
+    line-height: 3em;
+  }
+
+  .tab button{
+    line-height: 1.2em;
+    padding: 0.4em;
+  }
+
+  .tab button img{
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .title span{
+    font-size: 0.5em;
+  }
+
+  .email img,
+  .password img{
+    height: 3em;
+  }
+
+  .email input,
+  .password input,
+  .loginBtn button{
+    height: 2.5em;
+  }
+}

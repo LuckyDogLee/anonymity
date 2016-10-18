@@ -1,0 +1,79 @@
+/*.hot-bar{
+  max-width: 60em;
+}*/
+
+.g-main{
+  width: 100%;
+}
+
+.g-main h1{
+  padding-left: 0.5em;
+  
+/*  margin-bottom: 0.5em;*/
+}
+
+.bar{
+  clear: left;
+  width: 100%;
+
+  display: inline-block;
+  background-color: white;
+  margin: 0.2em 0;
+  color: black;
+}
+
+.bar img{
+  float: left;
+  margin: 0.4em;
+}
+
+.bar h2{
+  /*padding-top: 0.1em;*/
+  margin: 0.2em 0;    
+}
+
+.bar-intro{
+  height: 1.2em;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hot-bar footer{
+  margin-top: 1em;
+  margin-right: .2em;
+}
+
+.btn-focus,
+.btn-post,
+.btn-bar{
+  padding: 0.4em 1em;
+  border: 0;
+  border-radius: 0.4em;
+  background-color: rgb(30, 120, 207);
+  /*font: 100%/1.2 "Microsoft YaHei", Georgia, serif;*/
+  color: white;
+}
+
+
+.btn-focus{
+  font-family: "Microsoft YaHei", Georgia, serif;
+}
+
+.btn-post,
+.btn-bar{
+  font: 100%/1.2 "Microsoft YaHei", Georgia, serif;
+
+}
+
+@media only screen and (min-width: 48em){
+  .bar{
+    width: 14.6em;
+  }
+
+  .hot-bar footer{
+    margin-top: 1em;
+    margin-right: 1em;
+  }
+}

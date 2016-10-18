@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>蒙面侠 - 匿名贴吧</title>
+  <link rel="shortcut icon" href="img/logo-small.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/user-page.css">
+</head>
+<body>
+<!-- 页面 -->
+<div class="page">
+  <div class="hbg-color"></div>
+
+  <!-- 页面级页眉 -->
+  <header class="g-masthead" role="banner">
+    <a href="index.html" class="logo"><img src="img/logo-small.png"></a>
+
+    <strong>蒙面侠 <span>匿名贴吧</span></strong>
+
+    <ul id="login-register-bar">
+      <li><button href="login.html" id="hbtn-login">登录</button></li>
+      <li><a href="register.html">注册</a></li>
+    </ul>
+
+    <ul id="user-bar">
+      <li><a><img src="img/user.JPG"></a>
+        <ul class="user-submenu">
+          <li><a href="user-intro.html">Jack Lee</a></li>
+          <li><a href="user-page.html">个人主页</a></li>
+          <li><a href="user-setting.html">设置</a></li>
+        </ul>
+      </li>
+      <li><button id="hbtn-lgout">退出</button></li>
+    </ul>
+  </header>
+
+  <!-- 全站导航 -->
+  <nav class="g-nav" role="navigation">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="posts.html">贴吧</a></li>
+      <li class="li-third"><a href="download-app.html">下载APP</a>
+        <ul class="submenu">
+          <li><a href="#dl-android">Android</a></li>
+          <li><a href="#dl-ios">IOS</a></li>
+          <li><a href="#dl-uwp">UWP</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="search" class="lable-search">搜索：</label>
+        <input type="search" id="search" placeholder="一个贴吧或帖子">
+        <input type="submit" value="搜索" class="btn-search">
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 登录界面 -->
+  <div class="m-mask" id="mask"></div>
+  <div id="login-bar-parent">
+    <!-- 登录框 -->
+    <div class="m-login" id="login-bar">
+      <div class="item tab">登录<button id="btn-close"><img src="img/close.png"></button></div>
+      <div class="item title">蒙面侠<span>匿名贴吧</span></div>
+      <div class="item email"><img src="img/email.png"><input  id="email" placeholder="学生邮箱/常用邮箱" onfocus="stycleChange()"/></div>
+      <div class="item password"><img src="img/key.png"><input  id="password" placeholder="密码" type="password" onfocus="stycleChange()"/></div>
+      <div class="item loginBtn"><button id="btn-login">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button></div>
+      <div class="item tip"><a href="register.html">立即注册!</a><a href="register.html">忘记密码?</a></div>
+    </div>
+  </div>
+
+  <!-- 开始主体内容 -->
+  <main class="g-main">
+    <h1>user-page!</h1>
+  </main>
+
+  <!-- 页面级页脚 -->
+  <footer role="contentinfo" class="g-footer">
+    <div class="fbg-color"></div>
+    <p class="legal">&copy; 2016 msstudio of uestc</p>
+  </footer>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

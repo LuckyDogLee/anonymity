@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>蒙面侠 - 匿名贴吧</title>
+  <link rel="shortcut icon" href="img/logo-small.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<!-- 开始页面 -->
+<div class="page">
+  <div class="hbg-color"></div>
+
+  <!-- 页面级页眉 -->
+  <header class="g-masthead" role="banner">
+    <a href="index.html" class="logo"><img src="img/logo-small.png"></a>
+
+    <strong>蒙面侠 <span>匿名贴吧</span></strong>
+
+    <ul id="login-register-bar">
+      <li><button href="login.html" id="hbtn-login">登录</button></li>
+      <li><a href="register.html">注册</a></li>
+    </ul>
+
+    <ul id="user-bar">
+      <li><a><img src="img/user.JPG"></a>
+        <ul class="user-submenu">
+          <li><a href="user-intro.html">Jack Lee</a></li>
+          <li><a href="user-page.html">个人主页</a></li>
+          <li><a href="user-setting.html">设置</a></li>
+        </ul>
+      </li>
+      <li><button id="hbtn-lgout">退出</button></li>
+    </ul>
+  </header>
+
+  <!-- 全站导航 -->
+  <nav class="g-nav" role="navigation">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="posts.html">贴吧</a></li>
+      <li class="li-third"><a href="download-app.html">下载APP</a>
+        <ul class="submenu">
+          <li><a href="download-app.html#dl-android">Android</a></li>
+          <li><a href="download-app.html#dl-ios">IOS</a></li>
+          <li><a href="download-app.html#dl-uwp">UWP</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="search" class="lable-search">搜索：</label>
+        <input type="search" id="search" placeholder="一个贴吧或帖子">
+        <input type="submit" value="搜索" class="btn-search">
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 登录界面 -->
+  <div class="m-mask" id="mask"></div>
+  <div id="login-bar-parent">
+    <!-- 登录框 -->
+    <div class="m-login" id="login-bar">
+      <div class="item tab">登录<button id="btn-close"><img src="img/close.png"></button></div>
+      <div class="item title">蒙面侠<span>匿名贴吧</span></div>
+      <div class="item email"><img src="img/email.png"><input  id="email" placeholder="学生邮箱/常用邮箱" onfocus="stycleChange()"/></div>
+      <div class="item password"><img src="img/key.png"><input  id="password" placeholder="密码" type="password" onfocus="stycleChange()"/></div>
+      <div class="item loginBtn"><button id="btn-login">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button></div>
+      <div class="item tip"><a href="register.html">立即注册!</a><a href="register.html">忘记密码?</a></div>
+    </div>
+  </div>
+
+  <!-- 主体内容 -->
+  <main class="m-register" role="main">
+    <h1>创建一个新账号</h1>
+    <form>
+      <!-- START ACCOUNT FIELDS -->
+      <fieldset>
+      <h2 class="hdr-account">账号</h2>
+
+      <div class="fields">
+        <p class="row">
+          <label for="email1">学生邮箱:</label>
+          <input type="email" id="email1" name="email1" placeholder="name@example.com" class="field-large" />
+        </p>
+        <p class="row">
+          <label for="email2">常用邮箱:</label>
+          <input type="email" id="email2" name="email2" placeholder="name@example.com" class="field-large" />
+        </p>
+        <p class="row">
+          <label for="password1">密码:</label>
+          <input type="password" id="password1" name="password1" class="field-large" />
+        </p>
+        <p class="row">
+          <label for="password2">重复密码:</label>
+          <input type="password" id="password2" name="password2" class="field-large" />
+        </p>
+      </div>
+      </fieldset>
+      <!-- end account -->
+    
+      <!-- START ADDRESS FIELDS -->
+      <fieldset>
+      <h2 class="hdr-address">地址</h2>
+
+      <div class="fields">
+        <div class="row">
+          <label for="state">省份:</label>
+          <select id="state" name="state">
+            <option value="AL">北京</option>
+            <option value="AK">上海</option>
+            <option value="CA">四川</option>
+            <option value="CO">浙江</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="city">城市:</label>
+          <input type="text" id="city" name="city" class="field-large" />
+        </div>
+        <div class="row">
+          <label for="street-address">街道:</label>
+          <input type="text" id="street-address" name="street_address" class="field-large" />
+        </div>
+        <div class="row">
+          <label for="zip-code">邮政编码:</label>
+          <input type="text" id="zip-code" name="zip_code" class="field-small" />
+        </div>
+      </div>
+      </fieldset>
+      <!-- end address -->
+    
+      <!-- START PUBLIC PROFILE FIELDS -->
+      <fieldset>
+      <h2 class="hdr-public-profile">公开信息</h2>
+
+      <div class="fields">
+        <div class="row">
+          <label for="picture">头像:</label>
+          <input type="file" id="picture" name="picture" />
+          <!-- <p class="instructions">Maximum size of 700k. JPG, GIF or PNG.</p> -->
+        </div>
+        <p class="row">
+          <label for="shcool">学校:</label>
+          <input type="text" id="shcool" name="shcool" class="field-medium" />
+        </p>
+        <p class="row">
+          <label for="user-name">用户名:</label>
+          <input type="text" id="user-name" name="user_name" class="field-medium" />
+        </p>
+        
+        <p class="row">
+          <label for="bio">个人简介:</label>
+          <textarea id="bio" name="bio" cols="40" rows="5" class="field-large"></textarea>
+        </p>
+        <div class="row">
+          <fieldset class="radios">
+            <legend>性别:</legend>
+            <p class="row">
+              <input type="radio" id="gender-male" name="gender" value="male" />
+              <label for="gender-male">男</label>
+            </p>
+            <p class="row">
+              <input type="radio" id="gender-female" name="gender" value="female" />
+              <label for="gender-female">女</label>
+            </p>
+          </fieldset>
+        </div>
+      </div>
+      </fieldset>
+      <!-- end public profile -->
+    
+      <!-- START EMAILS FIELDS -->
+      <fieldset>
+      <h2 class="hdr-emails">邮箱设置</h2>
+      <div class="fields checkboxes">
+        <div class="row">
+          <input type="checkbox" id="email-ok-msg-from-users" name="email_signup[]" value="user-emails" />
+          <label for="email-ok-msg-from-users">允许其他用户发送邮件给我。</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="email-ok-occasional-updates" name="email_signup[]" value="occasional-updates" />
+          <label for="email-ok-occasional-updates">允许发送产品的推广消息到我的邮箱。</label>
+        </div>          
+      </div>
+      </fieldset>
+      <!-- end emails -->
+    
+      <input type="submit" value="创建账号" class="btn" />
+    </form>
+  </main>
+
+  <!-- 页面级页脚 -->
+  <footer role="contentinfo" class="g-footer">
+    <div class="fbg-color"></div>
+    <p class="legal">&copy; 2016 msstudio of uestc</p>
+  </footer>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

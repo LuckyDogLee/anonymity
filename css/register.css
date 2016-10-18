@@ -1,0 +1,185 @@
+body {
+  padding-bottom: 1em;
+}
+
+.m-register{
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+h1{
+  text-align: center;
+}
+
+h2 {
+  background-color: #dedede;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid #d4d4d4;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #ccc;
+  color: #fff;
+  font-size: 1.1em;
+  margin: .1em;
+  padding: 0.3em 1em;
+  text-shadow: #9FBEB9 1px 1px 1px;
+  text-transform: uppercase;
+}
+
+.hdr-account    { background-color: #0B5586; }
+.hdr-address    { background-color: #4494C9; }
+.hdr-public-profile { background-color: #377D87; }    
+.hdr-emails     { background-color: #717F88; }
+
+fieldset {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 0.125em;
+  margin-bottom: .75em;
+  overflow: hidden;
+  padding: 0 .625em; /* 10px/16px */
+}
+
+.fields {
+  background-color: #fff;
+  border: 0.0625em solid #eaeaea;
+  margin: .1em;
+  padding: .1em;
+}
+
+.fields .row {
+  margin: 0.5em 0;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.1875em 0.375em;
+  text-align: right;
+  /*width: 150px;*/
+  width: 5em;
+  vertical-align: top;
+}
+
+.required { /* the asterisk */
+  color: red;
+  display: none;
+}
+
+.field-small {
+  /*width: 75px;*/
+  width: 4.5em;
+}
+
+.field-medium {
+  /*width: 150px;*/
+  width: 9em;
+}
+
+.field-large {
+  /*width: 250px;*/
+  width: 9.5em;
+}
+
+select {
+  padding-right: 1em;
+}
+
+textarea {
+  font: inherit;
+  padding: 0.125em;
+}
+
+#picture{
+  width: 60%;
+}
+
+.instructions {
+  font-size: .75em;
+  padding-left: 2.5em;
+  font-style: italic;
+  margin: .5em 0 1.2em;
+}
+
+.btn {
+  background-color: #da820a;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #333;
+  color: #fff;
+  margin: 12px 0 0 26px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #777;
+}
+
+/* :::: Radio Buttons :::: */
+.radios {
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.radios .row {
+  margin: 0 0 0 4.5em;
+}
+
+.radios legend {
+  left: 0;
+  padding: 0 0.375em;
+  position: absolute;
+  text-align: right;
+  top: 0.125em;
+  width: 4em;
+  *width: 4em; /* a hack for IE7 */
+}
+
+.radios label {
+  padding-left: 0.125em;
+  /*margin-right: 5px;*/
+  vertical-align: middle;
+  width: auto;
+}
+
+/* :::: Checkboxes :::: */
+.checkboxes label {
+  text-align: left;
+  width: 85%;
+}
+
+button * {
+  vertical-align: middle;
+}
+
+
+@media only screen and (min-width: 48em){
+  h2 {
+    margin: .75em;
+  }
+
+  .fields {
+    margin: .75em;
+    padding: .75em;
+  }
+
+
+  label {
+    /*width: 150px;*/
+    width: 9.5em;
+  }
+
+  .field-large {
+    width: 15.5em;
+  }
+
+  .radios .row {
+  margin: 0 0 0 9.5em;
+  }
+
+  .radios legend {
+    width: 9.2em;
+    *width: 9em;/* a hack for IE7 */
+  }
+
+  .radios label {
+    margin-right: 0.3125em;
+  }
+}

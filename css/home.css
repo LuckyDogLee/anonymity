@@ -1,0 +1,135 @@
+.m-slides img{
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.g-main{
+  /*width: 80%;
+  float: left;*/
+
+  width: 100%;
+}
+
+.post{
+  width: 100%;
+  background-color: white;
+  /*margin-left: 0.5em;
+  margin-right: 0.5em;*/
+  border-radius: 1em;
+  color: black;
+}
+
+.post h1{
+  width: 100%;
+  margin: 1em 0 0.1em;
+  border-bottom: 0.1em solid rgb(238, 238, 238);
+  /*padding: 0.4em;
+    默认的盒模型的 width 指的是内容的宽度，不包含 padding 和 border，
+    由于此处的 width 为100%，若再加上0.4em的 padding，则这多出的 padding
+    将超出页面的正常范围，使得页面出现水平滚动条，破环页面的美观性，
+    可通过以下方法解决这个问题 
+  */
+  box-sizing: border-box;
+  padding: 0.4em;
+}
+
+.post img{
+  max-width: 3em;
+  float: left;
+  padding: 0.4em;
+}
+
+.post-blurb{
+  padding: 0 0.2em;
+}
+
+.post footer{
+  clear: left;
+  padding: 0.4em;
+  text-align: right;
+}
+
+.post:last-child{
+  margin-bottom: 1.5em;
+}
+
+.g-main footer{
+  text-align: right;
+  /*margin-top: 1em;*/
+  margin-bottom: 1.5em;
+}
+
+#btn-last,
+#btn-next{
+  padding: 0.4em 1em;
+  border: 0;
+  border-radius: 0.4em;
+  background-color: rgb(30, 120, 207);
+  font: 100%/1.2 "Microsoft YaHei", Georgia, serif;
+  color: white;
+}
+
+
+/* 侧边导航栏 */
+aside{
+  /*float: right;
+  width: 16%;*/
+  
+  width: 100%;
+
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  /*margin-right: 0.5em;*/
+  border-radius: 1em;
+  background-color: white;
+}
+
+aside h1{
+  margin: 0;
+  padding: 0.5em;
+  /*padding-bottom: 0;*/
+  border-bottom: 0.1em solid rgb(238, 238, 238);
+}
+
+aside ul{
+  margin: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.more{
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+aside ul ul{
+  padding-top: 0;
+  /*display: inline-block;*/
+}
+
+aside ul ul li{
+  display: inline-block;
+}
+
+aside li{
+  padding-top: 0.5em;
+}
+
+aside li:first-child{
+  padding-top: 0;
+}
+
+
+@media only screen and (min-width: 48em){
+  .g-main{
+    width: 80%;
+    float: left;
+  }
+
+  /* 侧边导航栏 */
+  aside{
+    float: right;
+    width: 16%;
+  }
+}
