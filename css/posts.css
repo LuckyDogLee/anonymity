@@ -48,7 +48,7 @@
 .btn-focus,
 .btn-post,
 .btn-bar{
-  padding: 0.4em 1em;
+  padding: 0.4em .6em;
   border: 0;
   border-radius: 0.4em;
   background-color: rgb(30, 120, 207);
