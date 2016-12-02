@@ -1,2 +1,5 @@
 # anonymity
-The FE of "anonymity forum" project
+
+[Live demo](http://luckypandalee.com/mood-sniffer)
+
+The front-end of "anonymity forum" project
